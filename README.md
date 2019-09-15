@@ -19,9 +19,11 @@ Date:         08.09.2019
   ./init_d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]
 
 # INPUT PARAMETERS:
-  [REFRESH INTERVAL]: number in seconds
-         [GAME TYPE]: raid, crucible, nightfall, gambit, blindwell, escalationprotocol, reckoning, menagerie
-            [FILTER]: key1,key2,prestige,catalyst   *optional parameter
+[REFRESH INTERVAL]: number in seconds
+
+[GAME TYPE]: raid, crucible, nightfall, gambit, blindwell, escalationprotocol, reckoning, menagerie
+
+[FILTER]: key1,key2,prestige,catalyst   *optional parameter
 
 # EXAMPLE:
   ./init_d2lfg.sh 30 crucible pvp,luna,comp
