@@ -32,7 +32,6 @@ Date:         08.09.2019 =============================================
   - you can call script with simple 
   `$ lfg [interval] [game type] [filter]`
 
-
 ================================================================================================
 # PURPOSE:
   Script is used to filter input keywords from Bungie find fireteam for Destiny 2 ps4 with specified refresh rate.
@@ -50,6 +49,7 @@ Date:         08.09.2019 =============================================
 
 # VIEW
   - https://github.com/majlo2L8/d2lfg/blob/master/Selection_524.png
+
 ================================================================================================
 # NAMING CONVENTION:
   lfg-v1.0.0.sh
