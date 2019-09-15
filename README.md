@@ -27,6 +27,9 @@ Date:         08.09.2019 =============================================
   ./init_d2lfg.sh 30 crucible pvp,luna,comp
 
 ================================================================================================
+# PURPOSE:
+  Script is used to filter input keywords from Bungie find fireteam for Destiny 2 ps4 with specified refresh rate.
+
 # DESCRIPTION:
   - Init script is used to call main script in `watch` command:
     $ watch -n <refresh interval> -ct './d2lfg.sh'
