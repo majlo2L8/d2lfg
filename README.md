@@ -48,6 +48,8 @@ Date:         08.09.2019 =============================================
   - Main output is shown with automatic refresh according to input paramter.
   - To STOP watch press ctrl+c
 
+# VIEW
+  - https://github.com/majlo2L8/d2lfg/blob/master/Selection_524.png
 ================================================================================================
 # NAMING CONVENTION:
   lfg-v1.0.0.sh
