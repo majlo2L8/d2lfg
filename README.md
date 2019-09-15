@@ -24,7 +24,14 @@ Date:         08.09.2019 =============================================
 - [FILTER]: key1,key2,prestige,catalyst   *optional parameter
 
 # EXAMPLE:
-  ./init_d2lfg.sh 30 crucible pvp,luna,comp
+  `./init_d2lfg.sh 30 crucible pvp,luna,comp`
+
+# ALTERNATIVE USAGE:
+  - add following line to ~/.bashrc
+  `alias lfg='sh /path/d2lfg/init_d2lfg.sh'`
+  - you can call script with simple 
+  `$ lfg [interval] [game type] [filter]`
+
 
 ================================================================================================
 # PURPOSE:
@@ -32,7 +39,7 @@ Date:         08.09.2019 =============================================
 
 # DESCRIPTION:
   - Init script is used to call main script in `watch` command:
-    $ watch -n <refresh interval> -ct './d2lfg.sh'
+    `$ watch -n <refresh interval> -ct './d2lfg.sh'`
 
   - Main script is called by init_d2lfg.sh due to watch command limitations.
   - Input parameters/variables can not be passed to watch, tmp file is created instead.
