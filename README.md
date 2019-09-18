@@ -26,8 +26,8 @@
 
 **Optional:**    
  * GAME_TYPE 
-- name of activity in lower case without spaces   
-- get all activities if parameter does not match activity name   
+-- name of activity in lower case without spaces   
+-- get all activities if parameter does not match activity name   
 - raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie  
 
  * FILTER
