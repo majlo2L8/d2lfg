@@ -1,46 +1,47 @@
-=============================================
+====================================================
 Name:         d2lfg.sh
 Version:      1.1.0
 Author:       Mario Rybar
 E-Mail:       majlo.rybar@gmail.com
-Date:         08.09.2019 =============================================
+Date:         08.09.2019
 ====================================================
-# CHANGE LOG:
-  - 08.09.2019 - Initial version
-  - 15.09.2019 - v1.1.0: optimalization
+CHANGE LOG:
+  08.09.2019 - Initial version
+  15.09.2019 - v1.1.0: optimalization
 
-
-================================================================================================
-# PREPARATIONS:
+PREPARATIONS:
   1. make both files executable
-  2. Start ./init_d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]
+  2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]
   3. Stop ctrl+c
 
-# USAGE:
-  ./init_d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]
+USAGE:
+  sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...
 
-# INPUT PARAMETERS:
-- [REFRESH INTERVAL]: number in seconds
-- [GAME TYPE]: raid, crucible, nightfall, gambit, blindwell, escalationprotocol, reckoning, menagerie
-- [FILTER]: key1,key2,prestige,catalyst   *optional parameter
+INPUT PARAMETERS:
+ Mandatory:
+   -REFRESH_RATE     number of seconds for results refresh
 
-# EXAMPLE:
-  `./init_d2lfg.sh 30 crucible pvp,luna,comp`
+ Optional:
+   -GAME_TYPE        name of activity in lower case without spaces
+                     get all activities if parameter does not match activity name
+                      - raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie
+   -FILTER           leave empty for disabled filter
+                     search in results for keyword from parameter
+                     for multiple keywords specify single words without spaces separated by comma
+                      - key1,key2,prestige,catalyst,...
+   -h, --help        display this help
 
-# ALTERNATIVE USAGE:
-  - add following line to ~/.bashrc
-  `alias lfg='sh /path/d2lfg/init_d2lfg.sh'`
-  - you can call script with simple 
-  `$ lfg [interval] [game type] [filter]`
+EXAMPLE:
+  ./d2lfg.sh 30 crucible pvp,luna,comp
 
+ALTERNATIVE USAGE:
+    add following line to ~/.bashrc file:
+      alias lfg='sh /path/d2lfg/d2lfg.sh'
+    and call script with simple:~$ lfg [refresh] [game type] [filter]
 
-================================================================================================
-# PURPOSE:
-  Script is used to filter input keywords from Bungie find fireteam for Destiny 2 ps4 with specified refresh rate.
-
-# DESCRIPTION:
+DESCRIPTION:
   - Init script is used to call main script in `watch` command:
-    `$ watch -n <refresh interval> -ct './d2lfg.sh'`
+    $ watch -n <refresh interval> -ct './d2lfg.sh'
 
   - Main script is called by init_d2lfg.sh due to watch command limitations.
   - Input parameters/variables can not be passed to watch, tmp file is created instead.
@@ -48,7 +49,3 @@ Date:         08.09.2019 =============================================
   - Init checks dependencies and log results.
   - Main output is shown with automatic refresh according to input paramter.
   - To STOP watch press ctrl+c
-
-# VIEW
-  - https://github.com/majlo2L8/d2lfg/blob/master/Selection_524.png
-
