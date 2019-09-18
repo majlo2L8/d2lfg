@@ -15,7 +15,7 @@
 ## PREPARATIONS         
        
 1. make both files executable         
-2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]               
+2. Start `./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]`              
 3. Stop ctrl+c    
 ------------------------------------------------------------------------------   
 ## USAGE 
@@ -50,8 +50,8 @@ add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and c
 ---------------------------------------------------------------------------------
 
 ## DESCRIPTION   
-- Init script is used to call main script in `watch` command:  `$ watch -n -ct './d2lfg.sh'`   
-- Main script is called by init_d2lfg.sh due to watch command limitations.  
+- Init script is used to call main script in `watch` command:  `watch -n -ct './d2lfg-main.sh'`   
+- Main script is called by d2lfg.sh due to watch command limitations.  
 - Input parameters/variables can not be passed to watch, tmp file is created instead.  
 - Tmp file is removed when watch stops.  
 - Init checks dependencies and log results.  
