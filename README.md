@@ -28,16 +28,16 @@
 
 **Optional:**    
  * GAME_TYPE 
--- name of activity in lower case without spaces   
--- get all activities if parameter does not match activity name   
--- raid crucible nightfall gambit blindwell escalationprotocol reckoning menagerie  
+    - name of activity in lower case without spaces   
+    - get all activities if parameter does not match activity name   
+    - raid crucible nightfall gambit blindwell escalationprotocol reckoning menagerie  
 
  * FILTER
--- leave empty for disabled filter   
--- search in results for keyword from parameter                    
--- for multiple keywords specify single words without spaces separated by comma   
--- key1,key2,prestige,catalyst,...   
- -h, --help display this help          
+    - leave empty for disabled filter   
+    - search in results for keyword from parameter                    
+    - for multiple keywords specify single words without spaces separated by comma   
+    - key1,key2,prestige,catalyst,...   
+    - -h, --help display this help          
        
 ## EXAMPLE:                 
  `./d2lfg.sh 30 crucible pvp,luna,comp`    
