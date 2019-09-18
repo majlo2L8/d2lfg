@@ -1,8 +1,8 @@
-**Name:**         __d2lfg.sh         
-**Version:**      1.1.0                       
-**Author:**       Mario Rybar                   
-**E-Mail:**      majlo.rybar@gmail.com         
-**Date:**        08.09.2019
+**Name:**				d2lfg.sh         
+**Version:**    1.1.0                       
+**Author:**     Mario Rybar                   
+**E-Mail:**     majlo.rybar@gmail.com         
+**Date:**       08.09.2019
 
 -------------------------------------------------------------------------------------
 ## CHANGE LOG:
@@ -20,18 +20,18 @@
     `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...
 
 ## INPUT PARAMETERS:
- Mandatory:
-   -REFRESH_RATE     number of seconds for results refresh
+ **Mandatory:**                               
+   * REFRESH_RATE     number of seconds for results refresh
 
- Optional:
-   -GAME_TYPE        name of activity in lower case without spaces
-                     get all activities if parameter does not match activity name
+ **Optional:**                                            
+   * GAME_TYPE        name of activity in lower case without spaces                      
+                     get all activities if parameter does not match activity name         
                       - raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie
-   -FILTER           leave empty for disabled filter
-                     search in results for keyword from parameter
-                     for multiple keywords specify single words without spaces separated by comma
-                      - key1,key2,prestige,catalyst,...
-   -h, --help        display this help
+   * FILTER           leave empty for disabled filter            
+                     search in results for keyword from parameter             
+                     for multiple keywords specify single words without spaces separated by comma     
+                      - key1,key2,prestige,catalyst,...         
+   * -h, --help        display this help          
 
 ## EXAMPLE:
     `./d2lfg.sh 30 crucible pvp,luna,comp
