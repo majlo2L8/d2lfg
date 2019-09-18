@@ -38,7 +38,8 @@
 -- key1,key2,prestige,catalyst,...   
  -h, --help display this help          
        
-## EXAMPLE:  `./d2lfg.sh 30 crucible pvp,luna,comp  
+## EXAMPLE:                 
+ `./d2lfg.sh 30 crucible pvp,luna,comp  
  
  ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE:  
