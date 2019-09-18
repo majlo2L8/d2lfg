@@ -3,24 +3,27 @@
 **Author:** Mario Rybar 
 **E-Mail:** majlo.rybar@gmail.com         
  **Date:** 08.09.2019. 
+
  --------------------------------------------------------------------  
 ## CHANGE LOG:  
 
 08.09.2019 - Initial version  
 15.09.2019 - v1.1.0: optimalization     
 -------------------------------------------------------------------------------- 
-## PREPARATIONS:                
+## PREPARATIONS:         
+       
 1. make both files executable         
 2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]               
 3. Stop ctrl+c    
 ------------------------------------------------------------------------------   
 ## USAGE: 
- `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...  
+ `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]... `
 
 ## INPUT PARAMETERS:  
 **Mandatory:**  
- * REFRESH_RATE number of seconds for results refresh   
-**Optional:**   
+ * REFRESH_RATE number of seconds for results refresh         
+
+**Optional:**    
  * GAME_TYPE name of activity in lower case without spaces   get all activities if parameter does not match activity name   - raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie  
  * FILTER
  leave empty for disabled filter   search in results for keyword from parameter                    
