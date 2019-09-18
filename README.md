@@ -1,18 +1,21 @@
-__Name:__         d2lfg.sh
-__Version:__      1.1.0
-__Author:__       Mario Rybar
-__E-Mail:__       majlo.rybar@gmail.com
-__Date:__         08.09.2019
+# Name:         d2lfg.sh                   
+# Version:      1.1.0                       
+# Author:       Mario Rybar                   
+# E-Mail:       majlo.rybar@gmail.com         
+# Date:         08.09.2019
 
+-------------------------------------------------------------------------------------
 # CHANGE LOG:
   08.09.2019 - Initial version
   15.09.2019 - v1.1.0: optimalization
-
+  
+-------------------------------------------------------------------------------------
 # PREPARATIONS:
   1. make both files executable
   2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]
   3. Stop ctrl+c
-
+  
+-------------------------------------------------------------------------------------
 # USAGE:
   sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...
 
