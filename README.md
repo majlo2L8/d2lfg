@@ -7,8 +7,9 @@
  --------------------------------------------------------------------  
 ## CHANGE LOG:  
 
-08.09.2019 - Initial version  
-15.09.2019 - v1.1.0: optimalization     
+* v1.0.0 - 08.09.2019 - Initial version  
+* v1.1.0 - 15.09.2019 - optimalization     
+
 -------------------------------------------------------------------------------- 
 ## PREPARATIONS:         
        
@@ -27,8 +28,10 @@
  * GAME_TYPE name of activity in lower case without spaces   get all activities if parameter does not match activity name   - raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie  
  * FILTER
  leave empty for disabled filter   search in results for keyword from parameter                    
-for multiple keywords specify single words without spaces separated by comma   - key1,key2,prestige,catalyst,...   * -h, --help display this help                 
-## EXAMPLE:  `./d2lfg.sh 30 crucible pvp,luna,comp  ---------------------------------------------------------------------------------
+for multiple keywords specify single words without spaces separated by comma   - key1,key2,prestige,catalyst,...   * -h, --help display this help          
+       
+## EXAMPLE:  `./d2lfg.sh 30 crucible pvp,luna,comp 
+ ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE:  
 add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and call script with simple: `lfg [refresh] [game type] [filter]`  
 
