@@ -39,7 +39,7 @@
  -h, --help display this help          
        
 ## EXAMPLE:                 
- `./d2lfg.sh 30 crucible pvp,luna,comp  
+ `./d2lfg.sh 30 crucible pvp,luna,comp`    
  
  ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE:  
