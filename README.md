@@ -6,22 +6,22 @@
  **Date:** 08.09.2019. 
 
  --------------------------------------------------------------------  
-## CHANGE LOG:  
+## CHANGE LOG  
 
 * v1.0.0 - 08.09.2019 - Initial version  
 * v1.1.0 - 15.09.2019 - optimalization     
 
 -------------------------------------------------------------------------------- 
-## PREPARATIONS:         
+## PREPARATIONS         
        
 1. make both files executable         
 2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]               
 3. Stop ctrl+c    
 ------------------------------------------------------------------------------   
-## USAGE: 
+## USAGE 
  `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]... `
 
-## INPUT PARAMETERS:  
+## INPUT PARAMETERS  
 **Mandatory:**  
  * REFRESH_RATE         
 -- number of seconds for results refresh         
@@ -43,13 +43,13 @@
  `./d2lfg.sh 30 crucible pvp,luna,comp`    
  
  ---------------------------------------------------------------------------------
-## ALTERNATIVE USAGE:  
+## ALTERNATIVE USAGE     
 
 add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and call script with simple: `lfg [refresh] [game type] [filter]`        
 
 ---------------------------------------------------------------------------------
 
-## DESCRIPTION:  
+## DESCRIPTION   
 - Init script is used to call main script in `watch` command:  `$ watch -n -ct './d2lfg.sh'`   
 - Main script is called by init_d2lfg.sh due to watch command limitations.  
 - Input parameters/variables can not be passed to watch, tmp file is created instead.  
