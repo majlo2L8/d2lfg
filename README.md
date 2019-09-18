@@ -1,4 +1,5 @@
-# d2lfg.sh.                         
+#  d2lfg.sh 
+                       
  **Version:** 1.1.0           
 **Author:** Mario Rybar 
 **E-Mail:** majlo.rybar@gmail.com         
@@ -40,6 +41,7 @@
 ## EXAMPLE:  `./d2lfg.sh 30 crucible pvp,luna,comp 
  ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE:  
+
 add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and call script with simple: `lfg [refresh] [game type] [filter]`  
 
 ## DESCRIPTION:  
