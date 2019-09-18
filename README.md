@@ -30,7 +30,7 @@
  * GAME_TYPE 
 -- name of activity in lower case without spaces   
 -- get all activities if parameter does not match activity name   
--- raid/crucible/nightfall/gambit/blindwell/escalationprotocol/reckoning/menagerie  
+-- raid crucible nightfall gambit blindwell escalationprotocol reckoning menagerie  
 
  * FILTER
 -- leave empty for disabled filter   
@@ -45,7 +45,9 @@
  ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE:  
 
-add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and call script with simple: `lfg [refresh] [game type] [filter]`  
+add following line to .bashrc file: `alias lfg='sh /path/d2lfg/d2lfg.sh'`  and call script with simple: `lfg [refresh] [game type] [filter]`        
+
+---------------------------------------------------------------------------------
 
 ## DESCRIPTION:  
 - Init script is used to call main script in `watch` command:  `$ watch -n -ct './d2lfg.sh'`   
