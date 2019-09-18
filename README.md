@@ -24,7 +24,7 @@
 ## INPUT PARAMETERS  
 **Mandatory:**  
  * REFRESH_RATE         
--- number of seconds for results refresh         
+    - number of seconds for results refresh         
 
 **Optional:**    
  * GAME_TYPE 
