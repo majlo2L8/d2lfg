@@ -1,10 +1,9 @@
-====================================================
 Name:         d2lfg.sh
 Version:      1.1.0
 Author:       Mario Rybar
 E-Mail:       majlo.rybar@gmail.com
 Date:         08.09.2019
-====================================================
+
 # CHANGE LOG:
   08.09.2019 - Initial version
   15.09.2019 - v1.1.0: optimalization
@@ -34,14 +33,15 @@ PREPARATIONS:
 # EXAMPLE:
   ./d2lfg.sh 30 crucible pvp,luna,comp
 
+-------------------------------------------------------------------------------------
 # ALTERNATIVE USAGE:
-    add following line to ~/.bashrc file:
-      alias lfg='sh /path/d2lfg/d2lfg.sh'
-    and call script with simple:~$ lfg [refresh] [game type] [filter]
+   add following line to ~/.bashrc file:
+    `alias lfg='sh /path/d2lfg/d2lfg.sh`'
+   and call script with simple:~$ lfg [refresh] [game type] [filter]
 
 # DESCRIPTION:
   - Init script is used to call main script in `watch` command:
-    $ watch -n <refresh interval> -ct './d2lfg.sh'
+     `$ watch -n <refresh interval> -ct './d2lfg.sh'`
 
   - Main script is called by init_d2lfg.sh due to watch command limitations.
   - Input parameters/variables can not be passed to watch, tmp file is created instead.
