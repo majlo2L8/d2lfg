@@ -17,7 +17,7 @@
   
 -------------------------------------------------------------------------------------
 # USAGE:
-  `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...`
+    `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...`
 
 # INPUT PARAMETERS:
  Mandatory:
@@ -34,7 +34,7 @@
    -h, --help        display this help
 
 # EXAMPLE:
-  ./d2lfg.sh 30 crucible pvp,luna,comp
+    `./d2lfg.sh 30 crucible pvp,luna,comp`
 
 -------------------------------------------------------------------------------------
 # ALTERNATIVE USAGE:
