@@ -1,6 +1,6 @@
-**Name:**				d2lfg.sh         
-**Version:**    1.1.0                       
-**Author:**     Mario Rybar                   
+## **Name:**				d2lfg.sh         
+## **Version:**    1.1.0                       
+##### **Author:**     Mario Rybar                   
 **E-Mail:**     majlo.rybar@gmail.com         
 **Date:**       08.09.2019
 
