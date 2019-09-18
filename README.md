@@ -17,7 +17,7 @@
   
 -------------------------------------------------------------------------------------
 # USAGE:
-  sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...
+  `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...`
 
 # INPUT PARAMETERS:
  Mandatory:
