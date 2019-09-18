@@ -11,7 +11,8 @@
 ## PREPARATIONS:                
 1. make both files executable         
 2. Start ./d2lfg.sh [REFRESH INTERVAL] [GAME TYPE] [FILTER]               
-3. Stop ctrl+c   ------------------------------------------------------------------------------   
+3. Stop ctrl+c    
+------------------------------------------------------------------------------   
 ## USAGE: 
  `sh d2lfg.sh [REFRESH_RATE]... [GAME_TYPE]... [FILTER]...  
 
