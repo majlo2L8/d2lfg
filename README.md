@@ -43,9 +43,11 @@
   * HELP
      - -h, --help display this help          
        
-### EXAMPLE:                 
- `./d2lfg.sh 30 crucible pvp,luna,comp`    
+### EXAMPLE USAGE:                 
+ `./d2lfg.sh 5 nightfall`   
  
+### EXAMPLE OUTPUT:
+  ![GitHub Logo](/Example_output.png)    
  ---------------------------------------------------------------------------------
 ## ALTERNATIVE USAGE     
 
