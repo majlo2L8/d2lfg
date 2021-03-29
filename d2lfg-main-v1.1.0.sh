@@ -1,7 +1,7 @@
 #!/bin/bash
 #=====================================================
-# Name:         lfg-v1.0.0
-# Version:      1.0.0
+# Name:         lfg-main
+# Version:      1.1.0
 # Author:       Mario Rybar
 # E-Mail:       majlo.rybar@gmail.com
 # Date:         08.09.2019
@@ -39,7 +39,7 @@
 # set -x
 #==========================================================================================================
 # VARIABLES
-
+rm -rf ${M} ${F} ${U} ${A} ${T} ${Z} ${R}
 #REFRESH="$3"
 activityType=""
 activityName=""
@@ -69,11 +69,20 @@ REFRESH=$(sed -n 3p ${P})
 
 #==========================================================================================================
 # FUNCTIONS
+# SCII text generation: http://patorjk.com/software/taag/#p=display&f=Calvin%20S&t=DUNGEON
+# FONT: Calvin S
 
 # GET GAME TYPE FROM INPUT
 get_type() {
   # set according to input parameter
   case "$TYPE" in
+     "all")
+        activityType="0"
+        activityName="ALL"
+        HEADER1="${redBold}╔═╗╦  ╦ ${resetFont}"
+        HEADER2="${redBold}╠═╣║  ║ ${resetFont}"
+        HEADER3="${redBold}╩ ╩╩═╝╩═╝${resetFont}"
+     ;;
      "raid")
         activityType="1"
         activityName="RAID"
@@ -81,19 +90,26 @@ get_type() {
         HEADER2="${redBold}╠╦╝╠═╣║ ║║ ${resetFont}"
         HEADER3="${redBold}╩╚═╩ ╩╩═╩╝ ${resetFont}"
      ;;
-     "pvp" | "crucible")
+     "crucible" | "pvp")
         activityType="2"
         activityName="CRUCIBLE"
         HEADER1="${redBold}╔═╗╦═╗╦ ╦╔═╗╦╔╗ ╦  ╔═╗${resetFont}"
         HEADER2="${redBold}║  ╠╦╝║ ║║  ║╠╩╗║  ║╣ ${resetFont}"
         HEADER3="${redBold}╚═╝╩╚═╚═╝╚═╝╩╚═╝╩═╝╚═╝${resetFont}"
      ;;
-     "nf" | "nightfall")
+     "nightfall" | "nf")
         activityType="4"
         activityName="NIGHTFALL"
         HEADER1="${redBold}╔╗╔╦╔═╗╦ ╦╔╦╗╔═╗╔═╗╦  ╦  ${resetFont}"
         HEADER2="${redBold}║║║║║ ╦╠═╣ ║ ╠╣ ╠═╣║  ║  ${resetFont}"
         HEADER3="${redBold}╝╚╝╩╚═╝╩ ╩ ╩ ╚  ╩ ╩╩═╝╩═╝${resetFont}"
+     ;;
+     "anything")
+        activityType="5"
+        activityName="ANYTHING"
+        HEADER1="${redBold}╔═╗╔╗╔╦ ╦╔╦╗╦ ╦╦╔╗╔╔═╗${resetFont}"
+        HEADER2="${redBold}╠═╣║║║╚╦╝ ║ ╠═╣║║║║║ ╦${resetFont}"
+        HEADER3="${redBold}╩ ╩╝╚╝ ╩  ╩ ╩ ╩╩╝╚╝╚═╝${resetFont}"
      ;;
      "gambit")
         activityType="6"
@@ -116,7 +132,14 @@ get_type() {
         HEADER2="${redBold}║╣ ╚═╗║  ╠═╣║  ╠═╣ ║ ║║ ║║║║  ╠═╝╠╦╝║ ║ ║ ║ ║║  ║ ║║  ${resetFont}"
         HEADER3="${redBold}╚═╝╚═╝╚═╝╩ ╩╩═╝╩ ╩ ╩ ╩╚═╝╝╚╝  ╩  ╩╚═╚═╝ ╩ ╚═╝╚═╝╚═╝╩═╝${resetFont}"
      ;;
-     "reckoning")
+     "forge")
+        activityType="9"
+        activityName="FORGE"
+        HEADER1="${redBold}╔═╗╔═╗╦═╗╔═╗╔═╗${resetFont}"
+        HEADER2="${redBold}╠╣ ║ ║╠╦╝║ ╦║╣ ${resetFont}"
+        HEADER3="${redBold}╚  ╚═╝╩╚═╚═╝╚═╝${resetFont}"
+    ;;
+     "reckoning" | "reck")
         activityType="10"
         activityName="RECKONING"
         HEADER1="${redBold}╦═╗╔═╗╔═╗╦╔═╔═╗╔╗╔╦╔╗╔╔═╗${resetFont}"
@@ -130,6 +153,35 @@ get_type() {
         HEADER2="${redBold}║║║║╣ ║║║╠═╣║ ╦║╣ ╠╦╝║║╣ ${resetFont}"
         HEADER3="${redBold}╩ ╩╚═╝╝╚╝╩ ╩╚═╝╚═╝╩╚═╩╚═╝${resetFont}"
      ;;
+     "hunt" | "nightmare")
+        activityType="12"
+        activityName="nightmare-hunt"
+        HEADER1="${redBold}╔╗╔╦╔═╗╦ ╦╔╦╗╔╦╗╔═╗╦═╗╔═╗  ╦ ╦╦ ╦╔╗╔╔╦╗${resetFont}"
+        HEADER2="${redBold}║║║║║ ╦╠═╣ ║ ║║║╠═╣╠╦╝║╣   ╠═╣║ ║║║║ ║ ${resetFont}"
+        HEADER3="${redBold}╝╚╝╩╚═╝╩ ╩ ╩ ╩ ╩╩ ╩╩╚═╚═╝  ╩ ╩╚═╝╝╚╝ ╩ ${resetFont}"
+     ;;
+     "dung" | "dungeon")
+        activityType="15"
+        activityName="DUNGEON"
+        HEADER1="${redBold}╔╦╗╦ ╦╔╗╔╔═╗╔═╗╔═╗╔╗╔${resetFont}"
+        HEADER2="${redBold} ║║║ ║║║║║ ╦║╣ ║ ║║║║${resetFont}"
+        HEADER3="${redBold}═╩╝╚═╝╝╚╝╚═╝╚═╝╚═╝╝╚╝${resetFont}"
+     ;;
+     "bunker" | "seraph-bunker")
+        activityType="17"
+        activityName="seraph-bunker"
+        HEADER1="${redBold}╔╦╗╦ ╦╔╗╔╔═╗╔═╗╔═╗╔╗╔${resetFont}"
+        HEADER2="${redBold} ║║║ ║║║║║ ╦║╣ ║ ║║║║${resetFont}"
+        HEADER3="${redBold}═╩╝╚═╝╝╚╝╚═╝╚═╝╚═╝╝╚╝${resetFont}"
+     ;;
+     "tower" | "seraph-tower")
+        activityType="18"
+        activityName="seraph-tower"
+        HEADER1="${redBold}╔╦╗╦ ╦╔╗╔╔═╗╔═╗╔═╗╔╗╔${resetFont}"
+        HEADER2="${redBold} ║║║ ║║║║║ ╦║╣ ║ ║║║║${resetFont}"
+        HEADER3="${redBold}═╩╝╚═╝╝╚╝╚═╝╚═╝╚═╝╝╚╝${resetFont}"
+     ;;
+
   esac
 
   # SET URL
@@ -144,7 +196,7 @@ curl_lfg() {
   PAGES=$(curl -s "${URL}" | grep -c "js-next-fireteams clickable")
   # MATCH game type
 #  curl -s "${URL}" | grep -iP -B6 "${OPTIONS}" > ${M}
-  curl -s "${URL}" | grep -iP -C8 "${OPTIONS}" > ${M}
+  curl -s "${URL}" | grep -iP -C12 "${OPTIONS}" > ${M}
 
   # If there is another page
   if [ "${PAGES}" = "1" ]; then
@@ -196,26 +248,33 @@ parse_data() {
   sed -i '1 i\⌬ LFG POST' ${F}
   sed -i '1 i\⥱ URL' ${U}
   sed -i '1 i\ ⟳' ${T}
-  sed -i '1 i\ ✔' ${Z}
+  sed -i '1 i\ F' ${Z}
 
 
   # Join results into columns to one file
-  paste -d'@' ${Z} ${T} ${F} ${U} | column -s "@" -t | sed 's/^/ /g' > ${A}
+  paste -d'@' ${T} ${F} ${U} | column -s "@" -t | sed 's/^/ /g' > ${A}
 
 
 }
 
 #==========================================================================================================
 set_header() {
+
+  TITLE1="${redBold}${HEADER1}${resetFont}"
+  TITLE2="${redBold}${HEADER2}${resetFont}"
+  TITLE3="${redBold}${HEADER3}${resetFont}"
+
+
+
   #set -x
   TIME=$(date +"%T")
   finalL=""
 
   # HEADER LINE
   H0="${yellow}+----------------------------------------------------------------------------"
-  H1="${yellow}|  ${HEADER1}\t\t  Refreshed: ${TIME}   Every: ${REFRESH}s"
-  H2="${yellow}|  ${HEADER2}\t\t     Search: ${OPTIONS}"
-  H3="${yellow}|  ${HEADER3}"
+  H1="${yellow}|  ${TITLE1}\t\t  Refreshed: ${TIME}   Every: ${REFRESH}s"
+  H2="${yellow}|  ${TITLE2}\t\t     Search: ${OPTIONS}"
+  H3="${yellow}|  ${TITLE3}"
   H4="${yellow}| ${URL}"
 
   if [ $(echo "${H2}" | wc -m) -gt $(echo "${H4}" | wc -m) ]; then
@@ -246,7 +305,7 @@ log_output() {
   sed -n '1p' ${A} | sed 's/^\s//g'
 
   # reset font modifications
-  echo -en "${resetFont}"
+  echo -en "${reset}" | sed 's/(B//g'
 
   # read results
   tail -n +2 ${A}
@@ -257,9 +316,10 @@ log_output() {
 #==========================================================================================================
 # CLEAN UP
 clean_up() {
+  # cp ${A} /home/majlo
   # remove work data
   rm -rf ${M} ${F} ${U} ${A} ${T} ${Z} ${R}
-
+  #echo ""
 }
 
 #==========================================================================================================
