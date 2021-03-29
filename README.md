@@ -39,7 +39,7 @@
     - search in results for keyword from parameter                    
     - for multiple keywords specify single words without spaces separated by comma   
     - key1,key2,prestige,catalyst,...   
-    - -h, --help display this help          
+  * -h, --help display this help          
        
 ### EXAMPLE:                 
  `./d2lfg.sh 30 crucible pvp,luna,comp`    
