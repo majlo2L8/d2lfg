@@ -26,7 +26,7 @@
  * GAME_TYPE 
     - name of activity in lower case without spaces   
     - get all activities if parameter does not match activity name   
-    - raid crucible nightfall gambit blindwell escalationprotocol reckoning menagerie  
+    - Supported options: raid, crucible, pvp, nightfall, nf, gambit, blindwell, escalationprotocol, reckoning, menagerie  
 
  * FILTER
     - leave empty for disabled filter   
