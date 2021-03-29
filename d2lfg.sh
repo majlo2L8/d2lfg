@@ -1,7 +1,7 @@
 #!/bin/bash
 #=====================================================
 # Name:         init_d2lfg
-# Version:      1.0.0
+# Version:      1.3.0
 # Author:       Mario Rybar
 # E-Mail:       majlo.rybar@gmail.com
 # Date:         15.09.2019
@@ -30,6 +30,8 @@
 REFRESH="$1"
 TYPE="$2"
 FILTER="$3"
+# temporary file to pass inputs
+P="/tmp/d2lfg.pref.txt"
 
 # RUNTIME VAR
 SCRIPT_DIR=$(dirname "$0")
@@ -72,8 +74,6 @@ show_help(){
 # FUNCTIONS
 # Create tmp pref file
 gen_pref(){
-  # temporary file to pass inputs
-  P="/tmp/d2lfg.pref.txt"
 
   if [ $FILTER ]; then
     # replace , with | and put into ()
@@ -88,21 +88,20 @@ gen_pref(){
 # check if main script file is executable
 check_executable(){
   # does file exist?
-  ls "$SCRIPT_DIR" | grep -i d2lfg-main &>1
+  ls "$SCRIPT_DIR" | grep -i d2lfg-main 1&>2
   if [ "$?" = 0 ]; then
     if [ -x "$SCRIPT_MAIN" ]; then
-      echo " * d2lfg-main executable \t[OK]"
+      echo -en " * d2lfg-main executable \t[OK]\n"
     else
-      echo " * d2lfg.sh is not executable\t[FAILED]"
+      echo -en " * d2lfg.sh is not executable\t[FAILED]\n"
       echo ""
-      echo " ! Solution: $ sudo chmod 774 '$SCRIPT_MAIN'"
-      echo ""
-      echo " Stopping script now."
+      echo -en " ! Solution: $ sudo chmod 774 '$SCRIPT_MAIN'\n"
+      echo " Stopping script now.\n"
       exit 0
     fi
   else
-    echo " * $MAIN_NAME not found \t[FAILED]"
-    echo " ! Solution: Put '$MAIN_NAME' and '$SCRIPT_NAME' into the same directory"
+    echo -en " * $MAIN_NAME not found \t[FAILED]\n"
+    echo -en " ! Solution: Put '$MAIN_NAME' and '$SCRIPT_NAME' into the same directory\n"
     echo ""
   fi
 }
@@ -111,11 +110,11 @@ check_executable(){
 check_dep(){
   # if command exist
   if command -v $1 >/dev/null 2>&1 ; then
-    echo " * $1 found\t\t\t[OK]"
+    echo -en " * $1 found\t\t\t[OK]\n"
   else
-    echo -n " * $1 not found\t\t[FAILED]\n"
-    echo -n " ! Install $1:\t $ sudo apt-get install $1\n"
-    echo -n "\t\t\t $ sudo yum install $1\n"
+    echo -en " * $1 not found\t\t[FAILED]\n"
+    echo -en " ! Install $1:\t $ sudo apt-get install $1\n"
+    echo -en "\t\t\t $ sudo yum install $1\n"
     echo " Stopping script now."
     exit 0
   fi
@@ -136,29 +135,28 @@ if [ -x $HELP ]; then
     show_help
     exit 0
   else
-    echo " Refresh rate has to be number in seconds."
+    echo " No refresh interval specified. Using default 30 seconds."
   fi
 else
   # SAY HELLO
-    echo -n "--------------------------------------------------------------------------\n"
-    echo -n " Starting initial checks "
-    # CALL FUNCTIONS
+    echo -en "--------------------------------------------------------------------------\n"
+    echo -en " Starting initial checks \n"
+  # CALL FUNCTIONS
   gen_pref
-    echo "1. File '$SCRIPT_MAIN':"
+    echo -en "1. File '$SCRIPT_MAIN':\n"
   check_executable
     echo ""
-    echo "2. Commands dependencies:"
+    echo -en "2. Commands dependencies:\n"
   check_dep column
   check_dep tput
   check_dep curl
-    # MAIN MAGIC
+  # MAIN MAGIC
     echo ""
-    echo -n " Starting "
+    echo " Starting... "
   watch -n ${REFRESH} -ct "$SCRIPT_MAIN"
+    echo "all done!"
   # THANKS NOOPNOOP
   clean_up
-
-    echo "all done!"
 fi
 
 exit 0
